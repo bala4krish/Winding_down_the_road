@@ -85,3 +85,67 @@ The C++ solution has a class Rosenbrock that has data and member functions to su
 **Conclusion**
 
     Steepest Descent is many cheap steps and Newton’s is few costly steps.
+
+
+**Some Results**
+
+    Steepest Descent
+
+            iteration : 0,	        f(x) : 0.168912,	learning rate : 0.000633826
+
+            iteration : 1,	        f(x) : 0.0128133,	learning rate : 0.000792282
+
+            iteration : 2,	        f(x) : 0.0125482,	learning rate : 0.000792282
+
+            iteration : 3,	        f(x) : 0.0125255,	learning rate : 0.0037779
+
+            iteration : 4,	        f(x) : 0.0125076,	learning rate : 0.000990353
+
+            iteration : 5,	        f(x) : 0.0124615,	learning rate : 0.00922338
+
+            iteration : 6,	        f(x) : 0.0124233,	learning rate : 0.000792282
+
+            iteration : 7,	        f(x) : 0.0123059,	learning rate : 0.022518
+
+            iteration : 8,	        f(x) : 0.0122295,	learning rate : 0.000792282
+            .
+            .
+            .
+            .
+            .
+            .
+            .
+            iteration : 979,	f(x) : 1.56258e-09,	learning rate : 0.000990353
+
+            iteration : 980,	f(x) : 1.55835e-09,	learning rate : 0.00302232
+
+            iteration : 981,	f(x) : 1.55087e-09,	learning rate : 0.00922338
+
+            iteration : 982,	f(x) : 1.55087e-09, 	learning rate : 2.14526e-17
+
+
+            Optimal points 	        x1 : 1.00004,	 x2 : 1.00008
+
+
+    Newton’s Method
+
+            iteration : 0,	        f(x) : 0.0383841,	learning rate : 1
+
+            iteration : 1,	        f(x) : 0.0175462,	learning rate : 0.4096
+
+            iteration : 2,	        f(x) : 0.00490727,	learning rate : 1
+
+            iteration : 3,	        f(x) : 0.00083187,	learning rate : 1
+
+            iteration : 4,	        f(x) : 4.2605e-05,	learning rate : 1
+
+            iteration : 5,	        f(x) : 1.93131e-07,	learning rate : 1
+
+            iteration : 6,	        f(x) : 5.05906e-12,	learning rate : 1
+
+            iteration : 7,	        f(x) : 0,	        learning rate : 1
+
+            iteration : 8,	        f(x) : 0,	        learning rate : 1
+
+
+            Optimal points 	        x1 : 1,	        x2 : 1
