@@ -441,4 +441,4 @@ std::pair<float,float> Rosenbrock::NewtonMethod()
       return nm_nstate;
 }
 
-/* Optimizer_hpp */
+/* Optimizer_cpp */
