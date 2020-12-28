@@ -12,9 +12,9 @@ The implementation by default minimizes the famous **Rosenbrock Banana function*
     These limitations will be a reasonable update for the future work.
     
 <p float = "left">
-    <img width="300" height="200" src="https://user-images.githubusercontent.com/56740627/103203619-2954de00-48aa-11eb-919d-0730e59bde0e.png">
-    <img width="300" height="200" src="https://user-images.githubusercontent.com/56740627/103203522-f14d9b00-48a9-11eb-941f-bf543f5f9d44.png">
-    <img width="300" height="200" src="https://user-images.githubusercontent.com/56740627/103165023-71e79b00-47c7-11eb-827b-d862d71622cd.png">
+    <img width="310" height="210" src="https://user-images.githubusercontent.com/56740627/103203619-2954de00-48aa-11eb-919d-0730e59bde0e.png">
+    <img width="310" height="210" src="https://user-images.githubusercontent.com/56740627/103203522-f14d9b00-48a9-11eb-941f-bf543f5f9d44.png">
+    <img width="310" height="210" src="https://user-images.githubusercontent.com/56740627/103165023-71e79b00-47c7-11eb-827b-d862d71622cd.png">
 </p>
 
 **Steepest Descent** 
