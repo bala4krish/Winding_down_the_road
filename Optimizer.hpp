@@ -54,4 +54,4 @@ public:
       }
 };
 
-#endif /* Optimizer_cpp */
+#endif /* Optimizer_hpp */
