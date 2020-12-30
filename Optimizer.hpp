@@ -23,7 +23,7 @@ private:
       const float rho;
       std::pair<float, float> start;
       std::string fn;
-      std::vector<const char> xyz;
+      const std::vector<const char> xyz;
       const float slimit;
       std::vector<std::pair<float,float>> SD_ans;
       std::vector<std::pair<float,float>> NM_ans;
@@ -34,14 +34,14 @@ private:
 public:
       Rosenbrock(float fs, float rho, std::pair<float, float> fst, std::string fun, std::vector<const char> fin, float fsd=0)
       : step(fs), rho(rho), start(fst), fn(fun), xyz(fin), slimit(fsd) {}
-      std::unordered_map<std::string, int> Derivate(const char& );
-      double computePoly(const std::vector<std::pair<std::string,float>>& , const std::pair<float, float>& );
+      std::unordered_map<std::string, int> Derivate(const char& ) const;
+      double computePoly(const std::vector<std::pair<std::string,float>>& , const std::pair<float, float>& ) const;
       std::vector<float> Gradient(const std::pair<float, float>& );
       void computeFx();
       void SD_BackTrack(const std::pair<float, float>& );
       std::pair<float,float> steepestDescent();
       std::vector<std::vector<double>> Hessian(const std::pair<float, float>& );
-      void Inverse(std::vector<std::vector<double>>& );
+      void Inverse(std::vector<std::vector<double>>& ) const;
       void NM_BackTrack(const std::pair<float, float>& );
       std::pair<float,float> NewtonMethod();
       ~Rosenbrock()
