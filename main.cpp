@@ -44,11 +44,11 @@ int main(int argc, const char * argv[]) {
       std::getline(std::cin, user_fun);
       if(user_fun.size())
             func = user_fun;
-      float lr = 1;
-      float rho = 0.8;
-      std::pair<float,float> start_point = {1.2, 1.2};
-      std::vector<const char> xyz = {'x', 'y'};
-      float stop_limit = 0.0;
+      const float lr = 1;
+      const float rho = 0.8;
+      const std::pair<float,float> start_point = {1.2, 1.2};
+      const std::vector<const char> xyz = {'x', 'y'};
+      const float stop_limit = 0.0;
       int choice = 0;
       std::cout << "\nEnter your choice of optimization \n\t1 - Steepest Descent \n\t2 - Newton's Method \n\t3 - Both\n\n";
       std::cin >> choice;
