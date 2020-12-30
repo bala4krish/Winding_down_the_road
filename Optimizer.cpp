@@ -10,7 +10,7 @@
 
 
 // Function to compute derivative, used for Gradient and Hessian
-std::unordered_map<std::string, int> Rosenbrock::Derivate(const char& dx)
+std::unordered_map<std::string, int> Rosenbrock::Derivate(const char& dx) const
 {
       std::unordered_map<std::string, int> fmap;
       std::string temp;
@@ -57,7 +57,7 @@ std::unordered_map<std::string, int> Rosenbrock::Derivate(const char& dx)
             }
             else if(std::isdigit(this->fn[i]))
             {
-                  int t = this->fn[i] - '0';
+                  const int t = this->fn[i] - '0';
                   if(dflag)
                   {
                         coeff *= t;
@@ -102,7 +102,7 @@ std::unordered_map<std::string, int> Rosenbrock::Derivate(const char& dx)
 }
 
 // This function computes value of a polynomial at given points
-double Rosenbrock::computePoly(const std::vector<std::pair<std::string,float>>& vect, const std::pair<float, float>& pt)
+double Rosenbrock::computePoly(const std::vector<std::pair<std::string,float>>& vect, const std::pair<float, float>& pt) const
 {
       double grad_sum = 0;
       
@@ -204,7 +204,7 @@ void Rosenbrock::computeFx()
                   }
                   else
                   {
-                        int t = this->fn[i] - '0';
+                        const int t = this->fn[i] - '0';
                         coeff *= mul;
                         if(coeff == 1)
                         {
@@ -229,7 +229,6 @@ void Rosenbrock::SD_BackTrack(const std::pair<float, float>& btpt)
             this->computeFx();
       }
       
-      float c = 0.5;
       std::vector<float> btgrad;
       std::pair<float, float> btfx;
       double btfdx;
@@ -249,7 +248,7 @@ void Rosenbrock::SD_BackTrack(const std::pair<float, float>& btpt)
             {
                   bttemp += bt * bt;
             }
-            bttemp =  c * this->step * bttemp;
+            bttemp =  0.5 * this->step * bttemp;
             right = btfdx - bttemp;
             mul = this->rho;
       }
@@ -354,7 +353,7 @@ std::vector<std::vector<double>> Rosenbrock::Hessian(const std::pair<float, floa
 }
 
 // Function to compute Inverse of the Hessian matrix
-void Rosenbrock::Inverse(std::vector<std::vector<double>>& Inv)
+void Rosenbrock::Inverse(std::vector<std::vector<double>>& Inv) const
 {
       const double det = Inv.front().front() * Inv.back().back() - Inv.front().back() * Inv.back().front();
       std::swap(Inv.front().front(), Inv.back().back());
@@ -372,7 +371,6 @@ void Rosenbrock::NM_BackTrack(const std::pair<float, float>& nmbtpt)
             this->computeFx();
       }
       
-      const float c = 0.5;
       std::vector<float> nm_grad;
       std::vector<std::vector<double>> nm_hess;
       std::pair<float, float> left_res;
@@ -398,7 +396,7 @@ void Rosenbrock::NM_BackTrack(const std::pair<float, float>& nmbtpt)
             nm_grad_tr = nm_grad;
             right_res = nm_grad_tr.front() * left_res.first + nm_grad_tr.back() * left_res.second;
             right_fx = this->computePoly(this->fvec, nmbtpt);
-            right = right_fx - c * this->step * right_res;
+            right = right_fx - 0.5 * this->step * right_res;
             
             mul = this->rho;
       }
